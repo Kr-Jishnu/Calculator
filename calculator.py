@@ -114,6 +114,14 @@ def button_clicked(value):
                 label["text"] = value
             else:
                 label["text"]+=value
+        # ✅ Square root operation (without math library)
+        elif value == "√":
+            num = float(label["text"])
+            if num >= 0:
+                label["text"] = remove_zero_decimal(num ** 0.5)
+            else:
+                label["text"] = "Error"
+
 
 window.update()
 window_width = window.winfo_width()
